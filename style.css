@@ -6,16 +6,20 @@
     font-family: "Hanken Grotesk";
 }
 :root{
-    --sky-blue :   #47A1D8 ;
-    --dark-purple :   #362E67 ;
-    --red :   #DD1803 ;
-    --light-green :   #53964D ;
-    --color :   #47A1D8 ;
+    --sky-blue : #47A1D8;
+    --dark-purple : #362E67;
+    --red : #DD1803;
+    --light-green : #53964D;
+    --color : #47A1D8;
 }
 .img-response{
     width: 100%;
     height: 100%;
 }
+.head-section-1 .d-none{
+    display: none;
+}
+
 
 header{
     background-color: #000;
@@ -23,6 +27,7 @@ header{
     padding: 0 7.8rem;
 }
 nav{
+    background-color: #000;
     display: flex;
     color: #fff;
     gap: 1rem;
@@ -70,6 +75,7 @@ nav .head-section-3{
     gap: 1rem;
     list-style: none;
     align-items: center;
+    width: 100%;
 }
 nav .head-section-2 ul li a{
     font-size: 0.78rem;
@@ -174,7 +180,7 @@ nav .head-section-1{
     padding: 10px;
     gap: 10px;
     justify-content: end;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 500;
 }
 .big-pic .blank a:nth-child(1){
@@ -208,7 +214,7 @@ nav .head-section-1{
 .important-link::before{
     content: "";
     border: 1px solid var(--color);
-    top: 3px;
+    top: 2px;
     left: 0;
     position: absolute;
     height: 10px;
@@ -236,8 +242,8 @@ nav .head-section-1{
     content: "";
     position: absolute;
     left: -10px;
-    top: 6px;
-    height: .8rem;
+    top: 7.5px;
+    height: 1rem;
     border: 2px solid var(--red);
 }
 .bbc-news ul{
@@ -259,30 +265,240 @@ nav .head-section-1{
 }
 .bbc-news .news-content{
     display: flex;
+    position: relative;
     gap: 10px;
     flex-direction: column;
-    border-bottom: 2px solid #4A4A4A;
+    padding-bottom: 3rem;
 }
 
 .news-content .link-end{
     display: flex;
-    text-align:end;
+    bottom : 0px;
+    position: absolute;
 }
 
-
-@media screen and (max-width:750px){
+@media screen and (min-width: 951px) and (max-width: 1024px) {
     header{
         background-color: #000;
         width: 100%;
-        padding: 0 7.8rem;
+        padding: 0 1.8rem;
     }
     nav{
-        display: none;
+        display: flex;
         color: #fff;
         gap: 1rem;
         align-items: center;
     }
+    .logo{
+        padding: .875rem .71rem .875rem 0;
+        height: 4rem;
+        width: 8.25rem;
+    }
+    .d-none-lg{
+        display: none;
+    }
+    .sign-in p{
+        font-weight: 700;
+        font-size: 0.713rem;
+    }
 
+
+    .head-section-3 .searchBox{
+        background-color: #000;
+        display: flex;
+        height: 2.5rem;
+        width: 2rem;
+        align-items: center;
+    }
+    .searchBox span i{
+        font-size: 1.7rem;
+        padding: 0px;
+    }
+    .searchBox input{
+        display: none;
+    }
+
+    nav .head-section-2 ul li a{
+        font-size: 0.78rem;
+        text-decoration: none;
+        color: #fff;
+        font-weight: 700;
+        height: 100%;    
+    }
+
+    nav .head-section-3{
+        height: 3.738rem;
+        display: flex;
+        gap: 1rem;
+        list-style: none;
+        align-items: center;
+        width: 100%;
+        position: relative;
+    }
+    .head-section-3 .searchBox{
+        background-color: #000;
+        display: flex;
+        height: 2.5rem;
+        width: 2rem;
+        position: absolute;
+        right: 1.863rem;
+        align-items: center;
+    }
+
+    /* main body */
+    .container-fluid{
+        width: 100%;
+        padding: 0 1.2rem;   
+    }
+}
+
+/* tablet devices or medium screen sizes */
+@media screen and (max-width: 949px) and (min-width:750px){
+    header{
+        background-color: #000;
+        width: 100%;
+        padding: 0 1.8rem;
+    }
+    nav{
+        display: flex;
+        color: #fff;
+        gap: 1rem;
+        align-items: center;
+    }
+    .logo {
+        padding: .875rem .71rem .875rem 0;
+        height: 4rem;
+        width: 8.25rem;
+    }
+    .d-none-sm{
+        display: none;
+    }
+    nav .sign-in{
+        display: flex;
+        align-items: center;
+        height: 3.738rem;
+        width: 3rem;
+        position: relative;
+    }
+    .sign-in i{
+        font-size: 1.7rem;
+    }
+    .sign-in p{
+        display: none;
+        font-weight: 700;
+        font-size: 0.713rem;
+    }
+    nav .head-section-1{
+        display: flex;
+    }
+    .dots-wrap .dots::before{
+        top: -2.7px;
+    }
+    .dots-wrap .dots::after{
+        top: -2.7px;
+    }
+    
+
+    nav .head-section-3{
+        height: 3.738rem;
+        display: flex;
+        gap: 1rem;
+        list-style: none;
+        align-items: center;
+        width: 100%;
+        position: relative;
+    }
+    .head-section-3 .searchBox{
+        background-color: #000;
+        display: flex;
+        height: 2.5rem;
+        width: 2rem;
+        position: absolute;
+        right: 0px;
+        align-items: center;
+    }
+    .searchBox span i{
+        font-size: 1.7rem;
+        padding: 0px;
+    }
+    .searchBox input{
+        display: none;
+    }
+    /* nav section ends */
+    
+
+
+
+    /* main body section */
+    .container-fluid{
+        width: 100%;
+        padding: 0 1.2rem;   
+    }
+    .bbc-body{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding-bottom: 20px;
+        gap: 1rem;
+    }
+
+
+}
+
+/* mobile devices or small screen sizes */
+@media screen and (max-width:750px){
+    header{
+        background-color: #000;
+        width: 100%;
+        padding: 0 .8rem;
+    }
+    nav{
+        display: flex;
+        color: #fff;
+        gap: 2rem;
+        align-items: center;
+    }
+    .d-none-xs{
+        display: none;
+    }
+    .head-section-1 .d-none{
+        display: flex;
+    }
+    .head-section-1{
+        gap: 3rem;
+        
+    }
+    nav .sign-in{
+        display: none;
+        align-items: center;
+        height: 3.738rem;
+        width: 2rem;
+        position: relative;
+    }
+    nav .sign-in::after{
+        content: "";
+        position: absolute;
+        height: 1.25rem;
+        border: transparent;
+        right: -12px;
+    }
+    .head-section-3 .searchBox{
+        background-color: #000;
+        display: flex;
+        height: 2.5rem;
+        width: 2rem;
+        align-items: center;
+    }
+    .searchBox span i{
+        font-size: 1.7rem;
+        padding: 0px;
+    }
+    .searchBox input{
+        display: none;
+    }
+
+
+
+    /* main body */
     .container-fluid{
         width: 100%;
         padding: 0 .8rem;
@@ -318,16 +534,35 @@ nav .head-section-1{
         background: #000;
     }
     .grid .blank{
+        background: none;
         display: flex;
         flex-direction: column;
         padding: 0px;
-        gap: 0px;
+        gap: 0rem;
         justify-content: start;
         font-size: 11px;
         font-weight: 500;
     }
+    .grid{
+        margin-top: 0rem;
+    }
+    .grid .blank a{
+        color: #000;
+        font-size: 1rem;
+        font-weight: 700;
+        
+    }
     .big-pic .blank p{
         display: none;
+    }
+    .grid .blank{
+        position: relative;
+        border-bottom: 2px solid #4a4a4a1c;
+    }
+    .grid .blank .link-end{
+        display: flex;
+        bottom : 7px;
+        position: absolute;
     }
     .big-pic .blank a:nth-child(1){
         font-size: 1rem;
@@ -359,7 +594,7 @@ nav .head-section-1{
     .important-link::before{
         content: "";
         border: 1px solid var(--color);
-        top: 3px;
+        top:3px;
         left: 0;
         position: absolute;
         height: 10px;
@@ -381,7 +616,6 @@ nav .head-section-1{
         margin-top: 50px;
     }
     .bbc-news h2{
-        /* width: 100%; */
         color: #4A4A4A;
         font-size: 1.475rem;
         position: relative;
@@ -391,7 +625,7 @@ nav .head-section-1{
         content: "";
         position: absolute;
         left: -10px;
-        top: 6px;
+        top: 4.5px;
         height: .8rem;
         border: 2px solid var(--red);
     }
@@ -420,11 +654,14 @@ nav .head-section-1{
         display: flex;
         gap: 10px;
         flex-direction: column;
+        border-bottom: 2px solid #4a4a4a1c;
+        padding-bottom: 2rem;
     }
     
-    .news-content .link-end{
+    .img-content .link-end{
         display: flex;
-        text-align:end;
+        bottom : 10px;
+        position: absolute;
     }
     
 }
